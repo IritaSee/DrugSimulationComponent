@@ -20,7 +20,7 @@ PROGNAME := drug_sim
 CPPFLAGS := 
 
 # CXX to set the compiler
-CXX := mpicc
+CXX := mpic++
 
 # CXXFLAGS is used for C++ compilation options.
 #CXXFLAGS += -Wall -O0 -fpermissive -std=c++11
@@ -77,6 +77,7 @@ $(PROGNAME) : $(OBJECTS) Makefile
 # - the '-' before 'rm' command to informs make to ignore errors.
 clean :
 	@echo "Clean."
-	rm -rf *.o bin\$(PROGNAME)
-	rm -rf bin\result
-	mkdir bin\result
+	rm -rf **/*.o
+	rm -rf *.o bin/$(PROGNAME)
+	rm -rf bin/result
+	mkdir bin/result

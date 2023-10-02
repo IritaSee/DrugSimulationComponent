@@ -1,0 +1,4 @@
+*.o
+**/.o
+**/.plt
+bin/result/.csv
